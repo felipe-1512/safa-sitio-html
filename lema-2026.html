@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lema Anual 2026 - Colegio SAFA San José de Mayo">
+    <title>Lema 2026 - Colegio SAFA</title>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* ── Hero del lema ── */
+        .lema-hero {
+            background: linear-gradient(135deg, var(--color-azul-oscuro) 0%, var(--color-safa-morado) 100%);
+            padding: 5rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .lema-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url('images/lema-2026.jpg') center/cover no-repeat;
+            opacity: 0.15;
+        }
+        .lema-hero-content {
+            position: relative;
+            z-index: 1;
+            color: var(--color-blanco);
+        }
+        .lema-hero-content .etiqueta {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            border: 1px solid rgba(255,255,255,0.4);
+            color: var(--color-blanco);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 0.4rem 1.2rem;
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+        }
+        .lema-hero-content h1 {
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            color: var(--color-blanco);
+            line-height: 1.25;
+            max-width: 700px;
+            margin: 0 auto 1rem;
+        }
+        .lema-hero-content h1 span {
+            color: #FCD34D;
+        }
+        .lema-hero-content p {
+            font-size: 1.1rem;
+            opacity: 0.85;
+        }
+
+        /* ── Video ── */
+        .lema-video-section {
+            padding: 4rem 0;
+            background-color: var(--color-gris-claro);
+        }
+        .lema-video-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .video-responsive {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: var(--sombra-lg);
+        }
+        .video-responsive iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        /* ── Imagen del lema ── */
+        .lema-imagen-section {
+            padding: 4rem 0;
+            background-color: var(--color-blanco);
+        }
+        .lema-imagen-wrapper {
+            max-width: 860px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .lema-imagen-placeholder {
+            width: 100%;
+            min-height: 300px;
+            border-radius: 16px;
+            background: var(--color-gris-claro);
+            border: 2px dashed #CBD5E1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            color: var(--color-gris);
+        }
+        .lema-imagen-placeholder i {
+            font-size: 3rem;
+            opacity: 0.4;
+        }
+        .lema-imagen-real {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: var(--sombra-lg);
+            display: block;
+        }
+
+        /* ── Frase destacada ── */
+        .lema-frase-section {
+            padding: 5rem 0;
+            background: linear-gradient(135deg, var(--color-azul-oscuro), var(--color-safa-morado));
+            text-align: center;
+        }
+        .lema-frase-section blockquote {
+            max-width: 700px;
+            margin: 0 auto;
+            color: var(--color-blanco);
+            font-size: clamp(1.3rem, 3vw, 2rem);
+            font-style: italic;
+            font-weight: 300;
+            line-height: 1.5;
+            position: relative;
+            padding: 0 2rem;
+        }
+        .lema-frase-section blockquote::before,
+        .lema-frase-section blockquote::after {
+            content: '"';
+            font-size: 5rem;
+            color: #FCD34D;
+            line-height: 0;
+            vertical-align: -2rem;
+            font-style: normal;
+        }
+        .lema-frase-section blockquote::after {
+            content: '"';
+        }
+        .lema-frase-section cite {
+            display: block;
+            margin-top: 1.5rem;
+            color: rgba(255,255,255,0.7);
+            font-size: 0.95rem;
+            font-style: normal;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header con navegación -->
+    <header class="header" id="header">
+        <!-- Barra de anuncio -->
+        <div class="anuncio-bar">
+            <p>INSCRIPCIONES ABIERTAS</p>
+        </div>
+        
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo-safa.png" alt="Colegio SAFA San José de Mayo" class="logo-safa">
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-menu">
+                        <li><a href="index.html">Inicio</a></li>
+                        
+                        <li class="has-submenu">
+                            <a href="mision.html" class="active">Institucional <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="mision.html#mision">Misión</a></li>
+                                <li><a href="mision.html#vision">Visión</a></li>
+                                <li><a href="lema-2026.html" class="active">Lema Anual 2026</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="has-submenu">
+                            <a href="index.html#actividades">Propuesta Educativa <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="index.html#actividades">Maternal</a></li>
+                                <li><a href="index.html#actividades">Inicial</a></li>
+                                <li><a href="index.html#actividades">Primaria</a></li>
+                                <li><a href="index.html#actividades">Secundaria</a></li>
+                                <li><a href="index.html#actividades">Bachillerato</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="index.html#noticias">Noticias</a></li>
+                        <li><a href="index.html#contacto" class="btn-contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero del Lema -->
+    <section class="lema-hero">
+        <div class="container">
+            <div class="lema-hero-content">
+                <span class="etiqueta" data-aos="fade-down">Año Lectivo 2026</span>
+                <h1 data-aos="fade-up" data-aos-delay="100">
+                    <span>Diversos y originales</span><br>somos Nazaret
+                </h1>
+                <p data-aos="fade-up" data-aos-delay="250">Lema que nos guía durante todo el año 2026</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <div class="page-breadcrumb" style="background:#f9fafb; padding: 0.75rem 0; border-bottom: 1px solid #e5e7eb;">
+        <div class="container">
+            <p style="font-size:0.875rem; color: var(--color-gris);">
+                <a href="index.html">Inicio</a>
+                <i class="fas fa-chevron-right" style="font-size:0.65rem; margin: 0 0.4rem;"></i>
+                <a href="mision.html">Institucional</a>
+                <i class="fas fa-chevron-right" style="font-size:0.65rem; margin: 0 0.4rem;"></i>
+                <span>Lema Anual 2026</span>
+            </p>
+        </div>
+    </div>
+
+    <!-- Video del Lema -->
+    <section class="lema-video-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Video del Lema</h2>
+                <p>Mirá el video oficial del Lema Anual 2026</p>
+            </div>
+            <div class="lema-video-wrapper" data-aos="fade-up" data-aos-delay="150">
+                <div class="video-responsive">
+                    <iframe
+                        src="https://www.youtube.com/embed/snfRkSDhwu4"
+                        title="Lema Anual 2026 - Diversos y originales somos Nazaret"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Frase destacada -->
+    <section class="lema-frase-section">
+        <div class="container">
+            <blockquote data-aos="zoom-in">
+                Diversos y originales somos Nazaret
+                <cite>— Lema Anual 2026 · Colegio SAFA</cite>
+            </blockquote>
+        </div>
+    </section>
+
+    <!-- Imagen del Lema -->
+    <section class="lema-imagen-section">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Imagen del Lema</h2>
+            </div>
+            <div class="lema-imagen-wrapper" data-aos="fade-up" data-aos-delay="100">
+                <!-- Imagen del lema -->
+                <img src="images/lema-2026.jpg" alt="Lema Anual 2026 - Diversos y originales somos Nazaret" class="lema-imagen-real">
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Colegio SAFA</h3>
+                    <p>Formando el futuro con excelencia educativa desde 1950</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="mision.html">Institucional</a></li>
+                        <li><a href="index.html#actividades">Propuesta Educativa</a></li>
+                        <li><a href="index.html#noticias">Noticias</a></li>
+                        <li><a href="index.html#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Colegio SAFA - San José de Mayo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        AOS.init({ duration: 800, offset: 100, once: true, easing: 'ease-in-out' });
+
+        // Menú móvil
+        const menuToggle = document.getElementById('menuToggle');
+        const nav = document.getElementById('nav');
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Submenú móvil
+        document.querySelectorAll('.has-submenu').forEach(item => {
+            item.querySelector('a').addEventListener('click', (e) => {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    item.classList.toggle('active');
+                }
+            });
+        });
+
+        // Header scroll
+        const header = document.getElementById('header');
+        window.addEventListener('scroll', () => {
+            header.style.boxShadow = window.pageYOffset > 100
+                ? '0 4px 12px rgba(0,0,0,0.15)'
+                : '0 4px 6px rgba(0,0,0,0.1)';
+        });
+
+        // Botón volver arriba
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            backToTop.classList.toggle('show', window.pageYOffset > 300);
+        });
+        backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // Mostrar imagen real si carga correctamente
+        const imgReal = document.querySelector('.lema-imagen-real');
+        const imgPlaceholder = document.querySelector('.lema-imagen-placeholder');
+        if (imgReal) {
+            imgReal.addEventListener('load', () => {
+                imgReal.style.display = 'block';
+                if (imgPlaceholder) imgPlaceholder.style.display = 'none';
+            });
+        }
+    </script>
+</body>
+</html>

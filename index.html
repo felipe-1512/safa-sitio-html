@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colegio SAFA San José de Mayo - Formando el futuro con excelencia educativa">
+    <title>Colegio SAFA - San José de Mayo</title>
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <!-- Header con navegación -->
+    <header class="header" id="header">
+        <!-- Barra de anuncio -->
+        <div class="anuncio-bar">
+            <p>INSCRIPCIONES ABIERTAS</p>
+        </div>
+        
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="images/logo-safa.png" alt="Colegio SAFA San José de Mayo" class="logo-safa">
+                </div>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-menu">
+                        <li><a href="#inicio" class="active">Inicio</a></li>
+                        
+                        <li class="has-submenu">
+                            <a href="#institucional">Institucional <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="mision.html#mision">Misión</a></li>
+                                <li><a href="mision.html#vision">Visión</a></li>
+                                <li><a href="lema-2026.html">Lema Anual 2026</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li class="has-submenu">
+                            <a href="#propuesta">Propuesta Educativa <i class="fas fa-chevron-down"></i></a>
+                            <ul class="submenu">
+                                <li><a href="#maternal">Maternal</a></li>
+                                <li><a href="#inicial">Inicial</a></li>
+                                <li><a href="#primaria">Primaria</a></li>
+                                <li><a href="#secundaria">Secundaria</a></li>
+                                <li><a href="#bachillerato">Bachillerato</a></li>
+                            </ul>
+                        </li>
+                        
+                        <li><a href="#noticias">Noticias</a></li>
+                        <li><a href="#contacto" class="btn-contacto">Contacto</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-slideshow">
+            <div class="hero-slide active" style="background-image: url('images/hero-colegio.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero-2.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero-3.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero-4.jpg')"></div>
+            <div class="hero-slide" style="background-image: url('images/hero-5.jpg')"></div>
+        </div>
+        
+        <!-- Controles del slideshow -->
+        <button class="hero-nav hero-prev" id="heroPrev" aria-label="Anterior">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="hero-nav hero-next" id="heroNext" aria-label="Siguiente">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        
+        <!-- Indicadores -->
+        <div class="hero-indicators">
+            <button class="hero-dot active" data-slide="0"></button>
+            <button class="hero-dot" data-slide="1"></button>
+            <button class="hero-dot" data-slide="2"></button>
+            <button class="hero-dot" data-slide="3"></button>
+            <button class="hero-dot" data-slide="4"></button>
+        </div>
+        
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title" data-aos="fade-up">SAFA SAN JOSÉ</h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">Colegio y Liceo Sagrada Familia</p>
+        </div>
+        <div class="hero-scroll">
+            <a href="#actividades"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Galería de Propuesta Educativa -->
+    <section class="actividades" id="actividades">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Propuesta Educativa</h2>
+                <p>Conoce nuestros niveles educativos</p>
+            </div>
+            
+            <div class="actividades-grid">
+                <!-- Los 5 niveles educativos -->
+                <div class="actividad-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="actividad-imagen">
+                        <img src="images/nivel-maternal.jpeg" alt="Maternal">
+                        <div class="actividad-overlay">
+                            <h3>Maternal</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actividad-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="actividad-imagen">
+                        <img src="images/nivel-inicial.jpeg" alt="Inicial">
+                        <div class="actividad-overlay">
+                            <h3>Inicial</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actividad-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="actividad-imagen">
+                        <img src="images/nivel-primaria.jpeg" alt="Primaria">
+                        <div class="actividad-overlay">
+                            <h3>Primaria</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actividad-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="actividad-imagen">
+                        <img src="images/nivel-secundaria.jpg" alt="Secundaria">
+                        <div class="actividad-overlay">
+                            <h3>Secundaria</h3>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="actividad-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="actividad-imagen">
+                        <img src="images/nivel-bachillerato.JPG" alt="Bachillerato">
+                        <div class="actividad-overlay">
+                            <h3>Bachillerato</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Noticias -->
+    <section class="noticias" id="noticias">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Últimas Noticias</h2>
+                <p>Mantente informado sobre nuestras actividades y eventos</p>
+            </div>
+            
+            <div class="noticias-grid">
+                <!-- Las noticias se agregarán aquí -->
+            </div>
+            
+            <div class="noticias-vacio" data-aos="fade-up" style="text-align:center; padding: 3rem 0; color: var(--color-gris);">
+                <i class="fas fa-newspaper" style="font-size: 3rem; opacity: 0.3; display:block; margin-bottom: 1rem;"></i>
+                <p style="font-size: 1.1rem;">Próximamente compartiremos novedades del colegio.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section class="contacto" id="contacto">
+        <div class="container">
+            <div class="section-title" data-aos="fade-up">
+                <h2>Contáctanos</h2>
+                <p>Estamos aquí para responder tus consultas</p>
+            </div>
+            
+            <div class="contacto-wrapper" data-aos="fade-up" data-aos-delay="200">
+                <div class="contacto-info">
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contacto-texto">
+                            <h3>Dirección</h3>
+                            <p>Asamblea 702<br>San José de Mayo, Uruguay</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contacto-texto">
+                            <h3>Teléfonos</h3>
+                            <p><a href="tel:43423446">43423446</a> - <a href="tel:43426215">43426215</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contacto-texto">
+                            <h3>Email</h3>
+                            <p>
+                                <a href="mailto:dir.primaria@safasanjosedemayo.edu.uy">dir.primaria@safasanjosedemayo.edu.uy</a><br>
+                                <a href="mailto:dir.secundaria@safasanjosedemayo.edu.uy">dir.secundaria@safasanjosedemayo.edu.uy</a>
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="contacto-item">
+                        <div class="contacto-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contacto-texto">
+                            <h3>Horario Administración</h3>
+                            <p>Lunes a Viernes<br>8:00 - 17:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contacto-formulario">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="nombre">Nombre completo *</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="tel" id="telefono" name="telefono">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="mensaje">Mensaje *</label>
+                            <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i> Enviar mensaje
+                        </button>
+                    </form>
+                    <div id="formMessage" class="form-message"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h3>Colegio SAFA</h3>
+                    <p>Formando el futuro con excelencia educativa desde 1950</p>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Enlaces</h3>
+                    <ul>
+                        <li><a href="#institucional">Institucional</a></li>
+                        <li><a href="#propuesta">Propuesta Educativa</a></li>
+                        <li><a href="#noticias">Noticias</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 Colegio SAFA - San José de Mayo. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón volver arriba -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS (Animate On Scroll) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Script principal -->
+    <script src="js/script.js"></script>
+</body>
+</html>
