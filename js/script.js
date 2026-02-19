@@ -17,17 +17,33 @@ const dots = document.querySelectorAll('.hero-dot');
 const totalSlides = slides.length;
 let slideInterval;
 
+const heroPhrases = [
+    "Desde Maternal a Bachillerato, acompañamos cada etapa del crecimiento humano y espiritual.",
+    "Educamos en base al Carisma Taboriniano y la Espiritualidad Nazarena.",
+    "Todos podemos aprender, cada uno a su modo y ritmo.",
+    "El aula se expande: aprender es hacer, sentir y pensar.",
+    "Formamos personas críticas, libres, autónomas y comprometidas con la sociedad."
+];
+
+const heroPhraseEl = document.getElementById('heroPhrase');
+
 function updateSlide(index) {
-    // Remover clase active de slide y dot actuales
     slides[currentSlide].classList.remove('active');
     dots[currentSlide].classList.remove('active');
     
-    // Actualizar índice
     currentSlide = index;
     
-    // Agregar clase active al nuevo slide y dot
     slides[currentSlide].classList.add('active');
     dots[currentSlide].classList.add('active');
+
+    // Cambiar frase con fade
+    if (heroPhraseEl) {
+        heroPhraseEl.classList.add('fade-out');
+        setTimeout(() => {
+            heroPhraseEl.textContent = heroPhrases[currentSlide];
+            heroPhraseEl.classList.remove('fade-out');
+        }, 400);
+    }
 }
 
 function nextSlide() {
@@ -48,17 +64,6 @@ function startAutoSlide() {
 // Iniciar slideshow automático
 if (totalSlides > 1) {
     startAutoSlide();
-    
-    // Controles manuales
-    document.getElementById('heroNext').addEventListener('click', () => {
-        nextSlide();
-        startAutoSlide(); // Reiniciar timer
-    });
-    
-    document.getElementById('heroPrev').addEventListener('click', () => {
-        prevSlide();
-        startAutoSlide(); // Reiniciar timer
-    });
     
     // Indicadores
     dots.forEach((dot, index) => {
@@ -115,7 +120,6 @@ let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
     
-    // Agregar sombra al hacer scroll
     if (currentScroll > 100) {
         header.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.15)';
     } else {
