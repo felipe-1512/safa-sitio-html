@@ -908,12 +908,15 @@ section {
     }
 
     .header-content {
-        padding: var(--espaciado-sm) 0;
-        gap: var(--espaciado-xs);
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: var(--espaciado-sm) var(--espaciado-sm);
+        gap: 0;
     }
 
     .logo-safa {
-        height: 70px;
+        height: 90px;
     }
 
     /* Menú móvil */

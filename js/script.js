@@ -89,10 +89,12 @@ menuToggle.addEventListener('click', () => {
     icon.classList.toggle('fa-times');
 });
 
-// Cerrar menú al hacer click en un enlace
+// Cerrar menú al hacer click en un enlace (no en títulos con submenu)
 navLinks.forEach(link => {
     link.addEventListener('click', () => {
         if (window.innerWidth <= 768) {
+            // No cerrar si el link abre un submenu
+            if (link.closest('.has-submenu') && link.parentElement.classList.contains('has-submenu')) return;
             nav.classList.remove('active');
             const icon = menuToggle.querySelector('i');
             icon.classList.add('fa-bars');
