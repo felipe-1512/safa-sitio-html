@@ -18,22 +18,18 @@
     <style>
         /* ── Hero del lema ── */
         .lema-hero {
-            background: linear-gradient(135deg, var(--color-azul-oscuro) 0%, var(--color-safa-morado) 100%);
-            padding: 5rem 0 4rem;
-            text-align: center;
+            background: linear-gradient(135deg, var(--color-azul-oscuro) 0%, #38BDF8 100%);
+            padding: 4rem 0;
             position: relative;
             overflow: hidden;
         }
-        .lema-hero::before {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background: url('images/lema-2026.jpg') center/cover no-repeat;
-            opacity: 0.15;
+        .lema-hero-inner {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
         }
         .lema-hero-content {
-            position: relative;
-            z-index: 1;
+            flex: 1;
             color: var(--color-blanco);
         }
         .lema-hero-content .etiqueta {
@@ -53,8 +49,7 @@
             font-size: clamp(1.8rem, 4vw, 3rem);
             color: var(--color-blanco);
             line-height: 1.25;
-            max-width: 700px;
-            margin: 0 auto 1rem;
+            margin: 0 0 1rem;
         }
         .lema-hero-content h1 span {
             color: #FCD34D;
@@ -62,6 +57,23 @@
         .lema-hero-content p {
             font-size: 1.1rem;
             opacity: 0.85;
+        }
+        .lema-hero-imagen {
+            flex: 0 0 340px;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+        }
+        .lema-hero-imagen img {
+            width: 100%;
+            display: block;
+            object-fit: contain;
+            height: auto;
+        }
+        @media (max-width: 768px) {
+            .lema-hero-inner { flex-direction: column; text-align: center; }
+            .lema-hero-imagen { flex: 0 0 auto; width: 100%; max-width: 320px; }
+            .lema-hero-imagen img { height: 280px; }
         }
 
         /* ── Video ── */
@@ -127,7 +139,7 @@
         /* ── Frase destacada ── */
         .lema-frase-section {
             padding: 5rem 0;
-            background: linear-gradient(135deg, var(--color-azul-oscuro), var(--color-safa-morado));
+            background: linear-gradient(135deg, var(--color-azul-oscuro), #38BDF8);
             text-align: center;
         }
         .lema-frase-section blockquote {
@@ -218,36 +230,21 @@
     <!-- Hero del Lema -->
     <section class="lema-hero">
         <div class="container">
-            <div class="lema-hero-content">
-                <span class="etiqueta" data-aos="fade-down">Año Lectivo 2026</span>
-                <h1 data-aos="fade-up" data-aos-delay="100">
-                    <span>Diversos y originales</span><br>somos Nazaret
-                </h1>
-                <p data-aos="fade-up" data-aos-delay="250">Lema que nos guía durante todo el año 2026</p>
+            <div class="lema-hero-inner">
+                <div class="lema-hero-content" data-aos="fade-right">
+                    <span class="etiqueta">Año Lectivo 2026</span>
+                    <img src="images/lema2.png" alt="Diversos y originales somos Nazaret" style="max-width: 100%; display: block; margin: 0 0 1rem;">
+                </div>
+                <div class="lema-hero-imagen" data-aos="fade-left" data-aos-delay="150">
+                    <img src="images/familia.jpg" alt="Sagrada Familia de Nazaret">
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Breadcrumb -->
-    <div class="page-breadcrumb" style="background:#f9fafb; padding: 0.75rem 0; border-bottom: 1px solid #e5e7eb;">
-        <div class="container">
-            <p style="font-size:0.875rem; color: var(--color-gris);">
-                <a href="index.html">Inicio</a>
-                <i class="fas fa-chevron-right" style="font-size:0.65rem; margin: 0 0.4rem;"></i>
-                <a href="mision.html">Institucional</a>
-                <i class="fas fa-chevron-right" style="font-size:0.65rem; margin: 0 0.4rem;"></i>
-                <span>Lema Anual 2026</span>
-            </p>
-        </div>
-    </div>
-
     <!-- Video del Lema -->
     <section class="lema-video-section">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Video del Lema</h2>
-                <p>Mirá el video oficial del Lema Anual 2026</p>
-            </div>
             <div class="lema-video-wrapper" data-aos="fade-up" data-aos-delay="150">
                 <div class="video-responsive">
                     <iframe
@@ -274,9 +271,6 @@
     <!-- Imagen del Lema -->
     <section class="lema-imagen-section">
         <div class="container">
-            <div class="section-title" data-aos="fade-up">
-                <h2>Imagen del Lema</h2>
-            </div>
             <div class="lema-imagen-wrapper" data-aos="fade-up" data-aos-delay="100">
                 <!-- Imagen del lema -->
                 <img src="images/lema-2026.jpg" alt="Lema Anual 2026 - Diversos y originales somos Nazaret" class="lema-imagen-real">
