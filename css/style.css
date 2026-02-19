@@ -991,11 +991,24 @@ section {
     }
 
     .actividades-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--espaciado-md);
     }
 
     .actividad-card {
-        grid-column: auto;
+        grid-column: span 1 !important;
+    }
+
+    .actividad-card:nth-child(5) {
+        grid-column: 1 / -1 !important;
+        max-width: 50%;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Overlay siempre visible en móvil (no hay hover táctil) */
+    .actividad-overlay {
+        transform: translateY(0);
     }
 
     /* Footer */
