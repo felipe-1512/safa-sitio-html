@@ -3,59 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Consejo de Dirección del Colegio SAFA San José de Mayo">
-    <title>Consejo de Dirección - Colegio SAFA</title>
-    
-    <!-- Font Awesome para iconos -->
+    <meta name="description" content="Nivel Bachillerato - Colegio SAFA San José de Mayo">
+    <title>Bachillerato - Colegio SAFA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Estilos -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <!-- Header con navegación -->
+
     <header class="header" id="header">
-        <!-- Barra de anuncio -->
-        <div class="anuncio-bar">
-            <p>INSCRIPCIONES ABIERTAS</p>
-        </div>
-        
+        <div class="anuncio-bar"><p>INSCRIPCIONES ABIERTAS</p></div>
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <a href="index.html"><img src="images/logo-safa.png" alt="Colegio SAFA San José de Mayo" class="logo-safa"></a>
                 </div>
-                
-                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
-                    <i class="fas fa-bars"></i>
-                </button>
-                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
                 <nav class="nav" id="nav">
                     <ul class="nav-menu">
                         <li><a href="index.html">Inicio</a></li>
-                        
                         <li class="has-submenu">
-                            <a href="#institucional" class="active">Institucional <i class="fas fa-chevron-down"></i></a>
+                            <a href="#institucional">Institucional <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="mision.html#mision">Misión</a></li>
                                 <li><a href="mision.html#vision">Visión</a></li>
                                 <li><a href="lema-2026.html">Lema Anual 2026</a></li>
-                                <li><a href="consejo.html" class="active">Consejo de Dirección</a></li>
+                                <li><a href="consejo.html">Consejo de Dirección</a></li>
                             </ul>
                         </li>
-                        
                         <li class="has-submenu">
-                            <a href="index.html#actividades">Propuesta Educativa <i class="fas fa-chevron-down"></i></a>
+                            <a href="index.html#actividades" class="active">Propuesta Educativa <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="maternal.html">Maternal</a></li>
                                 <li><a href="inicial.html">Inicial</a></li>
                                 <li><a href="primaria.html">Primaria</a></li>
                                 <li><a href="secundaria.html">Secundaria</a></li>
-                                <li><a href="bachillerato.html">Bachillerato</a></li>
+                                <li><a href="bachillerato.html" class="active">Bachillerato</a></li>
                             </ul>
                         </li>
-                        
                         <li><a href="index.html#noticias">Noticias</a></li>
                         <li><a href="index.html#contacto" class="btn-contacto">Contacto</a></li>
                     </ul>
@@ -64,74 +48,32 @@
         </div>
     </header>
 
-    <!-- Sección Consejo de Dirección -->
-    <section class="institucional-seccion" id="consejo">
+    <section class="page-hero">
+        <div class="page-hero-overlay"></div>
         <div class="container">
-            <div style="text-align: center; margin-bottom: 3rem;" data-aos="fade-up">
-                <div class="institucional-icono" style="margin: 0 auto 1rem;">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h2 style="font-size: 2rem; color: var(--color-azul-oscuro);">Nuestro Consejo de Dirección</h2>
-                <p style="color: var(--color-texto-suave); max-width: 600px; margin: 0.75rem auto 0;">Equipo orientador del proyecto educativo institucional.</p>
-            </div>
-
-            <div class="consejo-grid" data-aos="fade-up" data-aos-delay="100">
-
-                <div class="consejo-card">
-                    <div class="consejo-info">
-                        <h3>Mag. Prof. Mauricio De León</h3>
-                        <p>Director de Educación Media Básica</p>
-                    </div>
-                </div>
-
-                <div class="consejo-card">
-                    <div class="consejo-info">
-                        <h3>Mag. Prof. María de los Ángeles Cabrera</h3>
-                        <p>Directora de Ipreu-SAFA</p>
-                    </div>
-                </div>
-
-                <div class="consejo-card">
-                    <div class="consejo-info">
-                        <h3>Mtra. María Claudia Magnoni</h3>
-                        <p>Directora de Educación Inicial y Primaria</p>
-                    </div>
-                </div>
-
-                <div class="consejo-card">
-                    <div class="consejo-info">
-                        <h3>Lic. Claudia Presno</h3>
-                        <p>Coordinadora General de Pastoral</p>
-                    </div>
-                </div>
-
-                <div class="consejo-card">
-                    <div class="consejo-info">
-                        <h3>Marcelo Montesdeoca</h3>
-                        <p>Administrador</p>
-                    </div>
-                </div>
-
-                <div class="consejo-card">
-                    <div class="consejo-info">
-                        <h3>Hno. Ernesto Cordero</h3>
-                        <p>Comunidad Religiosa</p>
-
-                    </div>
-                </div>
-
-                <div class="consejo-card">
-                    <div class="consejo-info">
-                        <h3>Hno. Alejandro Salvatierra</h3>
-                        <p>Comunidad Religiosa</p>
-                    </div>
-                </div>
-
+            <div class="page-hero-content">
+                <h1 data-aos="fade-up">Bachillerato</h1>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <section class="institucional-seccion" id="bachillerato">
+        <div class="container">
+            <div class="institucional-grid" data-aos="fade-up">
+                <div class="institucional-imagen" data-aos="fade-right">
+                    <img src="images/nivel-bachillerato.JPG" alt="Bachillerato">
+                </div>
+                <div class="institucional-contenido">
+                    <div class="institucional-icono"><i class="fas fa-university"></i></div>
+                    <h2>Nivel Bachillerato</h2>
+                    <div class="institucional-texto">
+                        <p class="mision-principal">Contenido del nivel Bachillerato próximamente.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -139,7 +81,6 @@
                     <h3>Colegio SAFA</h3>
                     <p>Formando el futuro con excelencia educativa</p>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Enlaces</h3>
                     <ul>
@@ -149,7 +90,6 @@
                         <li><a href="index.html#contacto">Contacto</a></li>
                     </ul>
                 </div>
-                
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
@@ -159,23 +99,15 @@
                     </div>
                 </div>
             </div>
-            
             <div class="footer-bottom">
                 <p>&copy; 2026 Colegio SAFA - San José de Mayo. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Botón volver arriba -->
-    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
-        <i class="fas fa-arrow-up"></i>
-    </button>
-
-    <!-- AOS (Animate On Scroll) -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
-    
-    <!-- Script principal -->
     <script src="js/script.js"></script>
 </body>
 </html>
