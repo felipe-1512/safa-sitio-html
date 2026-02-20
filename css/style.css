@@ -99,7 +99,7 @@ img {
    ======================================== */
 .header {
     position: relative;
-    background-color: var(--color-blanco);
+    background-color: #E0F2FE;
     box-shadow: var(--sombra-md);
     transition: var(--transicion);
     z-index: 1000;
@@ -159,7 +159,7 @@ img {
 
 .nav {
     width: 100%;
-    background-color: var(--color-blanco);
+    background-color: #E0F2FE;
     padding: var(--espaciado-sm) 0;
     border-radius: 12px;
     position: relative;
@@ -195,13 +195,15 @@ img {
     color: var(--color-gris-oscuro);
    font-weight: 600;
     border-radius: 8px;
+    border: 2px solid transparent;
     transition: var(--transicion);
 }
 
 .nav-menu > li > a:hover,
 .nav-menu > li > a.active {
-    background-color: var(--color-azul);
-    color: var(--color-blanco);
+    background-color: #E0F2FE;
+    color: #1B2E5A;
+    border: 2px solid #1B2E5A;
 }
 
 .nav-menu > li > a i {
@@ -880,12 +882,12 @@ section {
     display: flex;
     align-items: center;
     gap: 1.25rem;
-    background: var(--color-blanco);
+    background: #E0F2FE;
     border-radius: 16px;
     padding: 1.5rem;
     box-shadow: var(--sombra-md);
     transition: var(--transicion);
-    border-left: 4px solid var(--color-azul);
+    border-left: 4px solid #8B1538;
 }
 
 .consejo-card:hover {
@@ -990,7 +992,7 @@ section {
         top: 100%;
         left: 0;
         right: 0;
-        background-color: var(--color-blanco);
+        background-color: #E0F2FE;
         box-shadow: var(--sombra-lg);
         max-height: 0;
         overflow: hidden;
