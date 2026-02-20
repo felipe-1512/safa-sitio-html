@@ -7,6 +7,29 @@
     <title>Bachillerato - Colegio SAFA</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* === Ambientación verde inglés para Bachillerato === */
+        :root {
+            --bach-verde: #3B6E4A;
+            --bach-verde-oscuro: #2C5438;
+            --bach-verde-claro: #EAF3ED;
+        }
+        .header { background-color: var(--bach-verde-claro); }
+        .nav { background-color: var(--bach-verde-claro); }
+        .nav-menu > li > a:hover,
+        .nav-menu > li > a.active {
+            background-color: var(--bach-verde-claro);
+            color: var(--bach-verde-oscuro);
+            border-color: var(--bach-verde);
+        }
+        .menu-toggle { color: var(--bach-verde); }
+        .page-hero { background: linear-gradient(135deg, var(--bach-verde-oscuro) 0%, var(--bach-verde) 100%); }
+        .institucional-icono { background: linear-gradient(135deg, var(--bach-verde) 0%, var(--bach-verde-oscuro) 100%); }
+        .mision-principal { border-left-color: var(--bach-verde) !important; color: var(--bach-verde-oscuro) !important; background: linear-gradient(135deg, rgba(59,110,74,0.07), rgba(44,84,56,0.07)) !important; }
+        .institucional-contenido h2 { color: var(--bach-verde-oscuro); }
+        .back-to-top { background-color: var(--bach-verde); }
+        .back-to-top:hover { background-color: var(--bach-verde-oscuro); }
+    </style>
 </head>
 <body>
 
