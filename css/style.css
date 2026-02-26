@@ -477,8 +477,8 @@ section {
 
 .noticias-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: var(--espaciado-xl);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: var(--espaciado-lg);
 }
 
 .noticia-card {
@@ -510,7 +510,7 @@ section {
 .noticia-imagen {
     position: relative;
     overflow: hidden;
-    padding-top: 60%; /* Aspect ratio 5:3 */
+    padding-top: 50%; /* Aspect ratio */
     background-color: var(--color-gris);
 }
 
@@ -542,11 +542,11 @@ section {
 }
 
 .noticia-contenido {
-    padding: var(--espaciado-lg);
+    padding: var(--espaciado-md);
 }
 
 .noticia-contenido h3 {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
     margin-bottom: var(--espaciado-sm);
     color: var(--color-gris-oscuro);
 }
