@@ -154,5 +154,31 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <script src="js/script.js"></script>
+    <script>
+        // Lightbox
+        (function () {
+            var overlay = document.createElement('div');
+            overlay.className = 'lightbox-overlay';
+            overlay.innerHTML = '<button class="lightbox-close" aria-label="Cerrar">&times;</button><img src="" alt="">';
+            document.body.appendChild(overlay);
+            var lightboxImg = overlay.querySelector('img');
+            var closeBtn = overlay.querySelector('.lightbox-close');
+            document.addEventListener('click', function (e) {
+                if (e.target.classList.contains('gallery-img')) {
+                    lightboxImg.src = e.target.src;
+                    lightboxImg.alt = e.target.alt;
+                    overlay.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+            function closeLightbox() {
+                overlay.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+            closeBtn.addEventListener('click', closeLightbox);
+            overlay.addEventListener('click', function (e) { if (e.target === overlay) closeLightbox(); });
+            document.addEventListener('keydown', function (e) { if (e.key === 'Escape') closeLightbox(); });
+        })();
+    </script>
 </body>
 </html>

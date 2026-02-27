@@ -290,38 +290,3 @@ document.head.appendChild(style);
 // ========================================
 console.log('%c🎓 Colegio SAFA', 'font-size: 20px; font-weight: bold; color: #2563EB;');
 console.log('%cSitio desarrollado con HTML, CSS y JavaScript', 'color: #6B7280;');
-
-// ========================================
-// Lightbox para galerías de noticias
-// ========================================
-(function () {
-    const overlay = document.createElement('div');
-    overlay.className = 'lightbox-overlay';
-    overlay.innerHTML = '<button class="lightbox-close" aria-label="Cerrar">&times;</button><img src="" alt="">';
-    document.body.appendChild(overlay);
-
-    const lightboxImg = overlay.querySelector('img');
-    const closeBtn = overlay.querySelector('.lightbox-close');
-
-    document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('gallery-img')) {
-            lightboxImg.src = e.target.src;
-            lightboxImg.alt = e.target.alt;
-            overlay.classList.add('active');
-            document.body.style.overflow = 'hidden';
-        }
-    });
-
-    function closeLightbox() {
-        overlay.classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    closeBtn.addEventListener('click', closeLightbox);
-    overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) closeLightbox();
-    });
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeLightbox();
-    });
-})();
