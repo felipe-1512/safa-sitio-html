@@ -108,11 +108,8 @@ img {
 /* Barra de anuncio dentro del header */
 .anuncio-bar {
     background-color: #8B1538;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    padding: 0.75rem 1rem;
+    text-align: center;
+    padding: 0.75rem 0;
     width: 100%;
 }
 
@@ -125,21 +122,19 @@ img {
 }
 
 .anuncio-funcionarios {
-    position: absolute;
-    right: 1.5rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #FFFFFF;
-    font-size: 0.85rem;
-    font-weight: 600;
+    color: var(--color-texto) !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
     text-decoration: none;
-    opacity: 0.85;
-    transition: opacity 0.2s;
+    padding: 0.3rem 0.75rem !important;
+    border: 1px solid #8B1538;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
 }
 
 .anuncio-funcionarios:hover {
-    opacity: 1;
-    text-decoration: underline;
+    background-color: #8B1538 !important;
+    color: #FFFFFF !important;
 }
 
 .header-content {
@@ -1054,10 +1049,6 @@ section {
     .anuncio-bar p {
         font-size: 0.8rem;
         letter-spacing: 0.2px;
-    }
-
-    .anuncio-funcionarios {
-        display: none;
     }
 
     .header-content {
