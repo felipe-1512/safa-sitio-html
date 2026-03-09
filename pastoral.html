@@ -1,48 +1,63 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Inicial - Colegio SAFA San José de Mayo">
-    <title>Inicial - Colegio SAFA</title>
+    <meta name="description" content="Pastoral - Colegio SAFA San José de Mayo">
+    <title>Pastoral - Colegio SAFA</title>
+    
+    <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Estilos -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
+    
+    <!-- Header con navegación -->
     <header class="header" id="header">
-        <div class="anuncio-bar"><p>INSCRIPCIONES ABIERTAS</p></div>
+        <div class="anuncio-bar">
+            <p>INSCRIPCIONES ABIERTAS</p>
+        </div>
+        
         <div class="container">
             <div class="header-content">
                 <div class="logo">
                     <a href="index"><img src="images/logo-safa.png" alt="Colegio SAFA San José de Mayo" class="logo-safa"></a>
                 </div>
-                <button class="menu-toggle" id="menuToggle" aria-label="Menú"><i class="fas fa-bars"></i></button>
+                
+                <button class="menu-toggle" id="menuToggle" aria-label="Menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
                 <nav class="nav" id="nav">
                     <ul class="nav-menu">
                         <li><a href="index">Inicio</a></li>
+                        
                         <li class="has-submenu">
-                            <a href="#institucional">Institucional <i class="fas fa-chevron-down"></i></a>
+                            <a href="#institucional" class="active">Institucional <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="mision#mision">Misión</a></li>
                                 <li><a href="mision#vision">Visión</a></li>
                                 <li><a href="mision#calidad">Calidad</a></li>
                                 <li><a href="lema-2026">Lema Anual 2026</a></li>
                                 <li><a href="consejo">Consejo de Dirección</a></li>
-                                <li><a href="pastoral">Pastoral</a></li>
+                                <li><a href="pastoral" class="active">Pastoral</a></li>
                             </ul>
                         </li>
+                        
                         <li class="has-submenu">
-                            <a href="index#actividades" class="active">Propuesta Educativa <i class="fas fa-chevron-down"></i></a>
+                            <a href="index#actividades">Propuesta Educativa <i class="fas fa-chevron-down"></i></a>
                             <ul class="submenu">
                                 <li><a href="maternal">Maternal</a></li>
-                                <li><a href="inicial" class="active">Inicial</a></li>
+                                <li><a href="inicial">Inicial</a></li>
                                 <li><a href="primaria">Primaria</a></li>
                                 <li><a href="secundaria">Educación Media Básica</a></li>
                                 <li><a href="bachillerato">Ipreu SaFa</a></li>
                             </ul>
                         </li>
+                        
                         <li><a href="noticias.html">Noticias</a></li>
                         <li><a href="index#contacto" class="btn-contacto">Contacto</a></li>
                         <li><a href="https://recibos.kalsoft.com.uy/servlet/com.recibosonline.login" class="anuncio-funcionarios" target="_blank" rel="noopener noreferrer">Área de funcionarios</a></li>
@@ -52,29 +67,31 @@
         </div>
     </header>
 
-    <section class="institucional-seccion" id="inicial">
+    <!-- Sección Pastoral -->
+    <section class="institucional-seccion" id="pastoral">
         <div class="container">
-            <div class="institucional-grid" data-aos="fade-up">
-                <div class="institucional-imagen" data-aos="fade-right">
-                    <img src="images/nivel-inicial.png" alt="Inicial">
+            <div style="text-align: center; margin-bottom: 3rem;" data-aos="fade-up">
+                <div class="institucional-icono" style="margin: 0 auto 1rem;">
+                    <i class="fas fa-heart"></i>
                 </div>
-                <div class="institucional-contenido">
-                    <div class="institucional-icono"><i class="fas fa-child"></i></div>
-                    <h2>Inicial</h2>
-                    <div class="institucional-texto">
-                        <p class="mision-principal">En educación inicial se prioriza el aprendizaje activo y significativo. Los niños participan en experiencias prácticas en espacios como la cocina, la huerta, la sala de informática y la psicomotricidad, que estimulan la curiosidad, la creatividad y el contacto con el entorno.</p>
-                    </div>
-                </div>
+                <h2 style="font-size: 2rem; color: var(--color-azul-oscuro);">Pastoral</h2>
+                <p style="color: var(--color-texto-suave); max-width: 600px; margin: 0.75rem auto 0;">La dimensión pastoral es el corazón de nuestra propuesta educativa, integrando la fe y los valores en la vida cotidiana del colegio.</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;" data-aos="fade-up" data-aos-delay="100">
+                <p style="color: var(--color-texto); line-height: 1.8; margin-bottom: 1.5rem;">Contenido próximamente.</p>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-col">
                     <img src="images/familia-safa.png" alt="Familia SAFA" style="max-width: 180px; width: 100%; height: auto; display: block;">
                 </div>
+                
                 <div class="footer-col">
                     <h3>Enlaces</h3>
                     <ul>
@@ -84,6 +101,7 @@
                         <li><a href="index#contacto">Contacto</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h3>Síguenos</h3>
                     <div class="social-links">
@@ -93,15 +111,23 @@
                     </div>
                 </div>
             </div>
+            
             <div class="footer-bottom">
                 <p>&copy; 2026 Colegio SAFA - San José de Mayo. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <button class="back-to-top" id="backToTop" aria-label="Volver arriba"><i class="fas fa-arrow-up"></i></button>
+    <!-- Botón volver arriba -->
+    <button class="back-to-top" id="backToTop" aria-label="Volver arriba">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- AOS (Animate On Scroll) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <!-- Script principal -->
     <script src="js/script.js"></script>
 </body>
 </html>
