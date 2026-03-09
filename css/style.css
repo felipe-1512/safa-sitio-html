@@ -108,8 +108,11 @@ img {
 /* Barra de anuncio dentro del header */
 .anuncio-bar {
     background-color: #8B1538;
-    text-align: center;
-    padding: 0.75rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 0.75rem 1rem;
     width: 100%;
 }
 
@@ -119,6 +122,22 @@ img {
     font-weight: 700;
     font-size: 1rem;
     letter-spacing: 0.5px;
+}
+
+.anuncio-funcionarios {
+    position: absolute;
+    right: 1.5rem;
+    color: #FFFFFF;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-decoration: none;
+    opacity: 0.85;
+    transition: opacity 0.2s;
+}
+
+.anuncio-funcionarios:hover {
+    opacity: 1;
+    text-decoration: underline;
 }
 
 .header-content {
@@ -1033,6 +1052,10 @@ section {
     .anuncio-bar p {
         font-size: 0.8rem;
         letter-spacing: 0.2px;
+    }
+
+    .anuncio-funcionarios {
+        display: none;
     }
 
     .header-content {
