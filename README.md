@@ -1,6 +1,6 @@
 # 🎓 Sitio Web Colegio SAFA
 
-Sitio web institucional desarrollado con **HTML, CSS y JavaScript puro**. Sin dependencias, sin WordPress, sin complicaciones.
+
 
 ## 📁 Estructura del Proyecto
 
